@@ -1,1 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Shakeba Saree Sansaar</title>
+
+  <meta name="description"
+        content="Shakeba Saree Sansaar - Discover beautiful sarees, traditional collections and elegant styles. Visit our store.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f3e7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #12372a;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      color: #e8c76b;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #e8c76b;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+
+      background:
+        linear-gradient(rgba(18,55,42,0.82), rgba(18,55,42,0.82)),
+        url("shop.jpg") center/cover no-repeat;
+
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      color: #e8c76b;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e8c76b;
+      color: #12372a;
+      padding: 13px 25px;
+      margin: 5px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .title h2 {
+      color: #12372a;
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    .title p {
+      color: #666;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #12372a;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    }
+
+    .about {
+      background: #12372a;
+      color: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #e8c76b;
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .reviews {
+      background: #eee5d4;
+    }
+
+    .review {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .stars {
+      color: #d19f28;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 40px 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .contact-box h3 {
+      color: #12372a;
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #0b241b;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer span {
+      color: #e8c76b;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .logo {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      SHAKEBA SAREE SANSAAR
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>Shakeba Saree Sansaar</h1>
+
+      <p>
+        Traditional Elegance • Beautiful Sarees • Timeless Style
+      </p>
+
+      <a class="btn" href="#collection">
+        Explore Collection
+      </a>
+
+      <a class="btn" href="#contact">
+        Visit Our Store
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLLECTION -->
+
+  <section id="collection">
+
+    <div class="title">
+
+      <h2>Our Collection</h2>
+
+      <p>
+        Sarees for every occasion and every special moment.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="icon">👗</div>
+
+        <h3>Traditional Sarees</h3>
+
+        <p>
+          Elegant traditional sarees for beautiful ethnic looks.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">✨</div>
+
+        <h3>Party Wear</h3>
+
+        <p>
+          Stylish sarees for parties and special occasions.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">💛</div>
+
+        <h3>Wedding Collection</h3>
+
+        <p>
+          Beautiful sarees for weddings and celebrations.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">🌸</div>
+
+        <h3>New Arrivals</h3>
+
+        <p>
+          Discover our latest saree designs in store.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <div class="title">
+
+      <h2>Our Store</h2>
+
+      <p>
+        A glimpse of Shakeba Saree Sansaar.
+      </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <img src="shop.jpg"
+           alt="Shakeba Saree Sansaar shop interior">
+
+      <img src="sarees.jpg"
+           alt="Shakeba Saree Sansaar saree collection">
+
+      <img src="shop2.jpg"
+           alt="Shakeba Saree Sansaar store">
+
+      <img src="storefront.jpg"
+           alt="Shakeba Saree Sansaar storefront">
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="about-content">
+
+      <h2>About Us</h2>
+
+      <p>
+        Welcome to Shakeba Saree Sansaar.
+      </p>
+
+      <br>
+
+      <p>
+        We bring beautiful sarees and elegant styles
+        for everyday wear, celebrations, parties,
+        weddings and special occasions.
+      </p>
+
+      <br>
+
+      <p>
+        Visit our store and explore our collection in person.
+        Our team will be happy to help you find the perfect saree.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- REVIEWS -->
+
+  <section class="reviews" id="reviews">
+
+    <div class="title">
+
+      <h2>Customer Reviews</h2>
+
+      <p>
+        What our customers say.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="review">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Beautiful collection and good variety of sarees.
+        </p>
+
+      </div>
+
+
+      <div class="review">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Nice shop with many designs to choose from.
+        </p>
+
+      </div>
+
+
+      <div class="review">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Good place to shop for traditional sarees.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="title">
+
+      <h2>Visit Our Store</h2>
+
+      <p>
+        We would love to welcome you.
+      </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <h3>Shakeba Saree Sansaar</h3>
+
+      <p>
+        📍 <strong>Shop Address</strong>
+      </p>
+
+      <p>
+        📞 <strong>Phone Number</strong>
+      </p>
+
+      <p>
+        🕐 <strong>Opening Hours</strong>
+      </p>
+
+      <br>
+
+      <a class="btn" href="#">
+        📞 Call Us
+      </a>
+
+      <a class="btn" href="#">
+        💬 WhatsApp
+      </a>
+
+      <a class="btn" href="#">
+        📍 Google Maps
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026
+    <span>Shakeba Saree Sansaar</span>
+    — All Rights Reserved.
+
+  </footer>
+
+</body>
+</html>
