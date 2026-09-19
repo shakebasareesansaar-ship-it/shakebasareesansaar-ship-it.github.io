@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta name="google-site-verification" content="_B3g1ZhylM6ARoGVskkCfe5d8mzuu82tCMAmYaub2fI" />
+
+  <meta name="google-site-verification"
+        content="_B3g1ZhylM6ARoGVskkCfe5d8mzuu82tCMAmYaub2fI" />
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>Shakeba Saree Sansaar</title>
 
@@ -11,6 +17,7 @@
         content="Shakeba Saree Sansaar - Discover beautiful sarees, traditional collections and elegant styles. Visit our store.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -67,8 +74,11 @@
       padding: 60px 20px;
 
       background:
-        linear-gradient(rgba(18,55,42,0.82), rgba(18,55,42,0.82)),
-        url("shop.jpg") center/cover no-repeat;
+        linear-gradient(
+          rgba(18,55,42,0.82),
+          rgba(18,55,42,0.82)
+        ),
+        url("./shop.jpg") center/cover no-repeat;
 
       color: white;
     }
@@ -127,7 +137,10 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
       gap: 22px;
     }
 
@@ -144,11 +157,6 @@
       transform: translateY(-5px);
     }
 
-    .icon {
-      font-size: 45px;
-      margin-bottom: 12px;
-    }
-
     .card h3 {
       color: #12372a;
       margin-bottom: 10px;
@@ -156,7 +164,10 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+      );
       gap: 18px;
     }
 
@@ -235,6 +246,8 @@
       color: #e8c76b;
     }
 
+    /* MOBILE */
+
     @media (max-width: 700px) {
 
       header {
@@ -245,6 +258,10 @@
       .logo {
         text-align: center;
         font-size: 18px;
+      }
+
+      nav {
+        text-align: center;
       }
 
       nav a {
@@ -263,13 +280,22 @@
       section {
         padding: 55px 5%;
       }
+
+      .title h2 {
+        font-size: 30px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- ================= HEADER ================= -->
 
   <header>
 
@@ -278,24 +304,34 @@
     </div>
 
     <nav>
+
       <a href="#home">Home</a>
+
       <a href="#collection">Collection</a>
+
       <a href="#gallery">Gallery</a>
+
       <a href="#about">About</a>
+
       <a href="#reviews">Reviews</a>
+
       <a href="#contact">Contact</a>
+
     </nav>
 
   </header>
 
 
-  <!-- HERO -->
+
+  <!-- ================= HERO ================= -->
 
   <section class="hero" id="home">
 
     <div class="hero-content">
 
-      <h1>Shakeba Saree Sansaar</h1>
+      <h1>
+        Shakeba Saree Sansaar
+      </h1>
 
       <p>
         Traditional Elegance • Beautiful Sarees • Timeless Style
@@ -314,40 +350,93 @@
   </section>
 
 
-  <!-- COLLECTION -->
+
+  <!-- ================= COLLECTION ================= -->
 
   <section id="collection">
 
+    <div class="title">
+
+      <h2>
+        ✨ Our Collection
+      </h2>
+
+      <p>
+        Discover our beautiful latest collections.
+      </p>
+
     </div>
 
-    <div class="card">
-      <img src="collection8.jpg"
-           alt="New Collection"
-           style="width:100%; height:320px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
-      <h3>New Collection</h3>
-      <p>Discover fresh designs and beautiful styles.</p>
-    </div>
 
-    <div class="card">
-      <img src="collection9.jpg"
-           alt="Latest Collection"
-           style="width:100%; height:320px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
-      <h3>Latest Collection</h3>
-      <p>Explore our latest collection highlights.</p>
-    </div>
+    <div class="cards">
 
-  </div>
+
+      <div class="card">
+
+        <img
+          src="./collection8.jpg"
+          alt="New Collection"
+          style="
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            border-radius:14px;
+            margin-bottom:15px;
+          "
+        >
+
+        <h3>
+          New Collection
+        </h3>
+
+        <p>
+          Discover fresh designs and beautiful styles.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection9.jpg"
+          alt="Latest Collection"
+          style="
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            border-radius:14px;
+            margin-bottom:15px;
+          "
+        >
+
+        <h3>
+          Latest Collection
+        </h3>
+
+        <p>
+          Explore our latest collection highlights.
+        </p>
+
+      </div>
+
+
+    </div>
 
   </section>
 
 
-  <!-- GALLERY -->
+
+  <!-- ================= GALLERY ================= -->
 
   <section id="gallery">
 
     <div class="title">
 
-      <h2>Our Store</h2>
+      <h2>
+        Our Store
+      </h2>
 
       <p>
         A glimpse of Shakeba Saree Sansaar.
@@ -358,153 +447,441 @@
 
     <div class="gallery">
 
-      <img src="shop.jpg"
-           alt="Shakeba Saree Sansaar shop interior">
+      <img
+        src="./shop.jpg"
+        alt="Shakeba Saree Sansaar shop interior"
+      >
 
-      <img src="sarees.jpg"
-           alt="Shakeba Saree Sansaar saree collection">
+      <img
+        src="./sarees.jpg"
+        alt="Shakeba Saree Sansaar saree collection"
+      >
 
-      <img src="shop2.jpg"
-           alt="Shakeba Saree Sansaar store">
+      <img
+        src="./shop2.jpg"
+        alt="Shakeba Saree Sansaar store"
+      >
 
-      <img src="storefront.jpg"
-           alt="Shakeba Saree Sansaar storefront">
+      <img
+        src="./storefront.jpg"
+        alt="Shakeba Saree Sansaar storefront"
+      >
 
     </div>
 
   </section>
 
-<!-- LEHENGA & GHARARA COLLECTION -->
 
-<section id="lehenga-gharara" style="background:#f8f3e7;">
 
-  <div class="title">
-    <h2>✨ Lehenga & Gharara Collection</h2>
-    <p>Discover our elegant festive and wedding styles.</p>
-  </div>
+  <!-- ================= LEHENGA & GHARARA ================= -->
 
-  <div class="cards">
+  <section
+    id="lehenga-gharara"
+    style="background:#f8f3e7;"
+  >
 
-    <div class="card">
-      <img src="lehenga1.jpg"
-           alt="Premium Lehenga Collection"
-           style="width:100%;height:380px;object-fit:cover;border-radius:15px;">
-      <h3>Royal Lehenga</h3>
-      <p>Elegant lehenga designs for weddings and special occasions.</p>
+    <div class="title">
+
+      <h2>
+        ✨ Lehenga & Gharara Collection
+      </h2>
+
+      <p>
+        Discover our elegant festive and wedding styles.
+      </p>
+
     </div>
 
-    <div class="card">
-      <img src="lehenga2.jpg"
-           alt="Designer Lehenga Collection"
-           style="width:100%;height:380px;object-fit:cover;border-radius:15px;">
-      <h3>Designer Lehenga</h3>
-      <p>Beautiful designer styles with rich traditional detailing.</p>
+
+    <div class="cards">
+
+
+      <!-- LEHENGA 1 -->
+
+      <div class="card">
+
+        <img
+          src="./lehenga1.jpg"
+          alt="Premium Lehenga Collection"
+          style="
+            width:100%;
+            height:380px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+        <h3>
+          Royal Lehenga
+        </h3>
+
+        <p>
+          Elegant lehenga designs for weddings
+          and special occasions.
+        </p>
+
+      </div>
+
+
+
+      <!-- LEHENGA 2 -->
+
+      <div class="card">
+
+        <img
+          src="./lehenga2.jpg"
+          alt="Designer Lehenga Collection"
+          style="
+            width:100%;
+            height:380px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+        <h3>
+          Designer Lehenga
+        </h3>
+
+        <p>
+          Beautiful designer styles with rich
+          traditional detailing.
+        </p>
+
+      </div>
+
+
+
+      <!-- GHARARA 1 -->
+
+      <div class="card">
+
+        <img
+          src="./gharara1.jpg"
+          alt="Premium Gharara Collection"
+          style="
+            width:100%;
+            height:380px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+        <h3>
+          Royal Gharara
+        </h3>
+
+        <p>
+          Premium gharara styles for festive
+          and wedding occasions.
+        </p>
+
+      </div>
+
+
+
+      <!-- GHARARA 2 -->
+
+      <div class="card">
+
+        <img
+          src="./gharara2.jpg"
+          alt="Designer Gharara Collection"
+          style="
+            width:100%;
+            height:380px;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+          "
+        >
+
+        <h3>
+          Designer Gharara
+        </h3>
+
+        <p>
+          Graceful gharara designs with elegant
+          embroidery.
+        </p>
+
+      </div>
+
+
     </div>
 
-    <div class="card">
-      <img src="gharara1.jpg"
-           alt="Premium Gharara Collection"
-           style="width:100%;height:380px;object-fit:cover;border-radius:15px;">
-      <h3>Royal Gharara</h3>
-      <p>Premium gharara styles for festive and wedding occasions.</p>
+  </section>
+
+
+
+  <!-- ================= FEATURED COLLECTION ================= -->
+
+  <section
+    id="featured-collection"
+    style="background:#f8f3e7;"
+  >
+
+    <div class="title">
+
+      <h2>
+        ✨ Featured Collection
+      </h2>
+
+      <p>
+        Explore our beautiful saree and suit designs.
+      </p>
+
     </div>
 
-    <div class="card">
-      <img src="gharara2.jpg"
-           alt="Designer Gharara Collection"
-           style="width:100%;height:380px;object-fit:cover;border-radius:15px;">
-      <h3>Designer Gharara</h3>
-      <p>Graceful gharara designs with elegant embroidery.</p>
+
+    <div class="cards">
+
+
+      <div class="card">
+
+        <img
+          src="./collection1.jpg"
+          alt="Saree Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Elegant Sarees
+        </h3>
+
+        <p>
+          Beautiful saree designs for special occasions.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection2.jpg"
+          alt="Suit Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Designer Suits
+        </h3>
+
+        <p>
+          Stylish suit designs with elegant patterns.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection3.jpg"
+          alt="Festive Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Festive Collection
+        </h3>
+
+        <p>
+          Beautiful styles for festivals and celebrations.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection4.jpg"
+          alt="Traditional Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Traditional Collection
+        </h3>
+
+        <p>
+          Classic ethnic styles with timeless elegance.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection5.jpg"
+          alt="Designer Sarees"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Designer Sarees
+        </h3>
+
+        <p>
+          Graceful sarees for a stunning look.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection6.jpg"
+          alt="Wedding Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Wedding Collection
+        </h3>
+
+        <p>
+          Special styles for weddings and celebrations.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection7.jpg"
+          alt="Party Wear"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Party Wear
+        </h3>
+
+        <p>
+          Elegant designs for parties and special occasions.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection8.jpg"
+          alt="New Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          New Collection
+        </h3>
+
+        <p>
+          Discover fresh and beautiful new designs.
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <img
+          src="./collection9.jpg"
+          alt="Latest Collection"
+          style="
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:15px;
+          "
+        >
+
+        <h3>
+          Latest Styles
+        </h3>
+
+        <p>
+          Explore the latest styles from our collection.
+        </p>
+
+      </div>
+
+
     </div>
 
-  </div>
+  </section>
 
-</section>
-  <!-- ABOUT -->
-  
-<!-- FEATURED COLLECTION -->
 
-<section id="featured-collection" style="background:#f8f3e7;">
 
-  <div class="title">
-    <h2>✨ Featured Collection</h2>
-    <p>Explore our beautiful saree and suit designs.</p>
-  </div>
+  <!-- ================= ABOUT ================= -->
 
-  <div class="cards">
-
-    <div class="card">
-      <img src="collection1.jpg" alt="Saree Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Elegant Sarees</h3>
-      <p>Beautiful saree designs for special occasions.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection2.jpg" alt="Suit Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Designer Suits</h3>
-      <p>Stylish suit designs with elegant patterns.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection3.jpg" alt="Festive Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Festive Collection</h3>
-      <p>Beautiful styles for festivals and celebrations.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection4.jpg" alt="Traditional Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Traditional Collection</h3>
-      <p>Classic ethnic styles with timeless elegance.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection5.jpg" alt="Designer Sarees"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Designer Sarees</h3>
-      <p>Graceful sarees for a stunning look.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection6.jpg" alt="Wedding Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Wedding Collection</h3>
-      <p>Special styles for weddings and celebrations.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection7.jpg" alt="Party Wear"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Party Wear</h3>
-      <p>Elegant designs for parties and special occasions.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection8.jpg" alt="New Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>New Collection</h3>
-      <p>Discover fresh and beautiful new designs.</p>
-    </div>
-
-    <div class="card">
-      <img src="collection9.jpg" alt="Latest Collection"
-           style="width:100%;height:330px;object-fit:cover;border-radius:15px;">
-      <h3>Latest Styles</h3>
-      <p>Explore the latest styles from our collection.</p>
-    </div>
-
-  </div>
-
-</section>
-
-  <section class="about" id="about">
+  <section
+    class="about"
+    id="about"
+  >
 
     <div class="about-content">
 
-      <h2>About Us</h2>
+      <h2>
+        About Us
+      </h2>
 
       <p>
         Welcome to Shakeba Saree Sansaar.
@@ -521,8 +898,9 @@
       <br>
 
       <p>
-        Visit our store and explore our collection in person.
-        Our team will be happy to help you find the perfect saree.
+        Visit our store and explore our collection
+        in person. Our team will be happy to help
+        you find the perfect saree.
       </p>
 
     </div>
@@ -530,13 +908,19 @@
   </section>
 
 
-  <!-- REVIEWS -->
 
-  <section class="reviews" id="reviews">
+  <!-- ================= REVIEWS ================= -->
+
+  <section
+    class="reviews"
+    id="reviews"
+  >
 
     <div class="title">
 
-      <h2>Customer Reviews</h2>
+      <h2>
+        Customer Reviews
+      </h2>
 
       <p>
         What our customers say.
@@ -546,6 +930,7 @@
 
 
     <div class="cards">
+
 
       <div class="review">
 
@@ -558,6 +943,7 @@
         </p>
 
       </div>
+
 
 
       <div class="review">
@@ -573,6 +959,7 @@
       </div>
 
 
+
       <div class="review">
 
         <div class="stars">
@@ -585,18 +972,22 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- CONTACT -->
+
+  <!-- ================= CONTACT ================= -->
 
   <section id="contact">
 
     <div class="title">
 
-      <h2>Visit Our Store</h2>
+      <h2>
+        Visit Our Store
+      </h2>
 
       <p>
         We would love to welcome you.
@@ -607,48 +998,82 @@
 
     <div class="contact-box">
 
-      <h3>Shakeba Saree Sansaar</h3>
+      <h3>
+        Shakeba Saree Sansaar
+      </h3>
+
 
       <p>
         📍 <strong>Shop Address</strong>
       </p>
 
+
       <p>
         📞 <strong>7079739467</strong>
       </p>
+
 
       <p>
         🕐 <strong>10:00 AM – 8:00 PM</strong>
       </p>
 
+
       <br>
 
-      <a class="btn" href="#">
+
+      <!-- CALL -->
+
+      <a
+        class="btn"
+        href="tel:+917079739467"
+      >
         📞 Call Us
       </a>
 
-      <a class="btn" href="#">
+
+      <!-- WHATSAPP -->
+
+      <a
+        class="btn"
+        href="https://wa.me/917079739467"
+        target="_blank"
+      >
         💬 WhatsApp
       </a>
 
-      <a class="btn" href="https://maps.app.goo.gl/fVHsGSmQYv2jsvkH6" target="_blank">
+
+      <!-- GOOGLE MAPS -->
+
+      <a
+        class="btn"
+        href="https://maps.app.goo.gl/fVHsGSmQYv2jsvkH6"
+        target="_blank"
+      >
         📍 Google Maps
       </a>
+
 
     </div>
 
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- ================= FOOTER ================= -->
 
   <footer>
 
     © 2026
-    <span>Shakeba Saree Sansaar</span>
+
+    <span>
+      Shakeba Saree Sansaar
+    </span>
+
     — All Rights Reserved.
 
   </footer>
 
+
 </body>
+
 </html>
