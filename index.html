@@ -2374,6 +2374,37 @@ footer{position:relative;}
 {"@context":"https://schema.org","@type":"ClothingStore","name":"Shakeba Saree Sansaar","url":"https://shakebasareesansaar-ship-it.github.io/","telephone":"+91-7079739467","address":{"@type":"PostalAddress","streetAddress":"Isapur Petrol Line, Phulwari Sharif","addressLocality":"Patna","postalCode":"801505","addressCountry":"IN"},"openingHours":"Mo-Su 10:00-20:00"}
 </script>
 
+
+<style>
+/* ================= PREMIUM STICKY MOBILE + QUICK CONTACT ================= */
+.quick-contact{position:fixed;right:20px;bottom:92px;z-index:1999;display:flex;flex-direction:column;gap:9px}
+.quick-contact a{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:21px;background:#173f5f;color:#f1d47f;border:2px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.18);transition:.25s}
+.quick-contact a:hover{transform:translateY(-3px) scale(1.05)}
+.quick-contact .qc-call{background:#173f5f}
+.quick-contact .qc-map{background:#b98232;color:#fff}
+.site-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#b98232,#f1d47f);z-index:10000;transition:width .08s linear}
+@media(max-width:700px){.quick-contact{right:14px;bottom:82px}.quick-contact a{width:42px;height:42px;font-size:19px}.site-progress{height:2px}}
+</style>
+<div class="site-progress" id="siteProgress"></div>
+<div class="quick-contact" aria-label="Quick contact">
+<a class="qc-call" href="tel:+917079739467" aria-label="Call Shakeba Saree Sansaar" title="Call">📞</a>
+<a class="qc-map" href="https://maps.app.goo.gl/fVHsGSmQYv2jsvkH6" target="_blank" rel="noopener" aria-label="Open Google Maps" title="Google Maps">📍</a>
+</div>
+<script>
+(function(){
+function setupPremium(){
+ const bar=document.getElementById('siteProgress');
+ if(!bar)return;
+ function progress(){
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+ }
+ window.addEventListener('scroll',progress,{passive:true}); progress();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setupPremium);else setupPremium();
+})();
+</script>
+
 </body>
 
 </html>
