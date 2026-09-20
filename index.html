@@ -679,6 +679,97 @@
       }
     }
 
+
+    /* ================= IMAGE LIGHTBOX / ZOOM ================= */
+
+    .zoomable {
+      cursor: zoom-in;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: rgba(4,15,11,0.94);
+      backdrop-filter: blur(8px);
+    }
+
+    .image-lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-image {
+      max-width: 92vw;
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.55);
+      cursor: zoom-in;
+      touch-action: none;
+      user-select: none;
+      transition: transform 0.15s ease;
+    }
+
+    .image-lightbox.zoomed .lightbox-image {
+      max-width: none;
+      max-height: none;
+      cursor: zoom-out;
+      transform: scale(1.7);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(232,199,107,0.65);
+      border-radius: 50%;
+      background: rgba(18,55,42,0.9);
+      color: #e8c76b;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .lightbox-hint {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font: 14px Arial, sans-serif;
+      opacity: 0.82;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 700px) {
+      .image-lightbox {
+        padding: 14px;
+      }
+
+      .lightbox-image {
+        max-width: 96vw;
+        max-height: 82vh;
+      }
+
+      .image-lightbox.zoomed .lightbox-image {
+        transform: scale(1.45);
+      }
+
+      .lightbox-hint {
+        font-size: 12px;
+      }
+    }
+
   </style>
 
 </head>
@@ -1744,6 +1835,64 @@
 
 
 
+
+
+  <!-- ================= IMAGE LIGHTBOX ================= -->
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image">×</button>
+    <img class="lightbox-image" id="lightboxImage" alt="Collection preview">
+    <div class="lightbox-hint">Click / tap image to zoom • Click outside or × to close</div>
+  </div>
+
+  <script>
+    (function () {
+      const lightbox = document.getElementById("imageLightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const closeButton = document.getElementById("lightboxClose");
+
+      if (!lightbox || !lightboxImage || !closeButton) return;
+
+      const images = document.querySelectorAll(
+        ".card img, .gallery img"
+      );
+
+      images.forEach(function (img) {
+        img.classList.add("zoomable");
+        img.addEventListener("click", function () {
+          lightboxImage.src = img.currentSrc || img.src;
+          lightboxImage.alt = img.alt || "Collection preview";
+          lightbox.classList.add("active");
+          lightbox.classList.remove("zoomed");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove("active", "zoomed");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.removeAttribute("src");
+        document.body.style.overflow = "";
+      }
+
+      lightboxImage.addEventListener("click", function (event) {
+        event.stopPropagation();
+        lightbox.classList.toggle("zoomed");
+      });
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      closeButton.addEventListener("click", closeLightbox);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 
   <!-- ================= FLOATING WHATSAPP ================= -->
   <a
