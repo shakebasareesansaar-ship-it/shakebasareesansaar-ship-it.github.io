@@ -2455,6 +2455,43 @@ footer{position:relative!important;border-top:1px solid rgba(232,199,107,.35)!im
 })();
 </script>
 
+
+<!-- ================= ULTIMATE BOUTIQUE UI LAYER ================= -->
+<style>
+/* premium cursor glow */
+.premium-cursor{position:fixed;width:18px;height:18px;border:1px solid rgba(232,199,107,.7);border-radius:50%;pointer-events:none;z-index:12000;transform:translate(-50%,-50%);opacity:0;transition:opacity .2s,transform .08s;background:rgba(232,199,107,.06);box-shadow:0 0 24px rgba(232,199,107,.18)}
+/* section rhythm */
+.section-divider{width:min(180px,42vw);height:1px;margin:24px auto;background:linear-gradient(90deg,transparent,rgba(185,130,50,.65),transparent);position:relative}.section-divider:after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-55%);background:var(--cream,#f8f3e7);padding:0 10px;color:#b98232;font-size:12px}
+/* floating live enquiry */
+.live-enquiry{position:fixed;left:20px;bottom:28px;z-index:1997;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:24px;background:#fff;border:1px solid rgba(185,130,50,.28);box-shadow:0 10px 28px rgba(0,0,0,.12);font:700 12px Arial,sans-serif;color:#173f5f;text-decoration:none}.live-dot{width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 5px rgba(37,211,102,.12);animation:livePulse 1.8s infinite}@keyframes livePulse{50%{box-shadow:0 0 0 9px rgba(37,211,102,0)}}
+/* image shine */
+.card img,.gallery img,.new-arrival-card img,.category-card img{transition:transform .55s ease,filter .55s ease}.card:hover img,.gallery img:hover{transform:scale(1.035);filter:saturate(1.05)}
+/* elegant focus accessibility */
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #e8c76b;outline-offset:3px}
+/* tiny premium badges */
+.card,.new-arrival-card{position:relative}.card:has(img[alt*="Wedding"]):before,.card:has(img[alt*="Lehenga"]):before{content:"SPECIAL EDIT";position:absolute;top:12px;left:12px;z-index:5;padding:5px 8px;border-radius:10px;background:rgba(7,29,43,.88);color:#f1d47f;font:700 9px Arial,sans-serif;letter-spacing:1px}
+/* category chips */
+.premium-chip-row{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:0 auto 25px;padding:0 14px}.premium-chip-row a{padding:8px 14px;border-radius:20px;border:1px solid rgba(185,130,50,.28);background:rgba(255,255,255,.72);color:#173f5f;text-decoration:none;font:700 11px Arial,sans-serif;transition:.2s}.premium-chip-row a:hover{background:#173f5f;color:#f1d47f;transform:translateY(-2px)}
+/* cookie-free, no intrusive popup; toast feedback */
+.premium-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);padding:11px 17px;border-radius:24px;background:#071d2b;color:#fff;border:1px solid rgba(232,199,107,.35);font:600 12px Arial,sans-serif;opacity:0;pointer-events:none;z-index:11000;transition:.3s}.premium-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.live-enquiry{left:12px;bottom:76px;font-size:11px;padding:8px 11px}.premium-cursor{display:none}.premium-chip-row{gap:7px}.premium-chip-row a{padding:7px 11px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+<div class="premium-chip-row" aria-label="Quick collection links">
+<a href="#featured-collection">Sarees</a><a href="#kurti-collection">Kurtis</a><a href="#suit-collection">Suits</a><a href="#lehenga-gharara">Lehenga & Gharara</a><a href="#gallery">Shop Gallery</a>
+</div>
+<a class="live-enquiry" target="_blank" rel="noopener" href="https://wa.me/917079739467?text=Hello%20Shakeba%20Saree%20Sansaar%2C%20I%20would%20like%20help%20choosing%20an%20outfit."><span class="live-dot"></span>Style help on WhatsApp</a>
+<div class="premium-toast" id="premiumToast">Welcome to Shakeba Saree Sansaar ✦</div>
+<script>
+(function(){
+  if(!window.matchMedia('(pointer:coarse)').matches){
+    const c=document.createElement('div');c.className='premium-cursor';document.body.appendChild(c);window.addEventListener('mousemove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';c.style.opacity='1'},{passive:true});document.addEventListener('mouseleave',()=>c.style.opacity='0');
+  }
+  const t=document.getElementById('premiumToast');if(t){setTimeout(()=>t.classList.add('show'),900);setTimeout(()=>t.classList.remove('show'),3900)}
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const target=document.querySelector(a.getAttribute('href'));if(target&&target.id==='our-collection'){setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),80)}}));
+})();
+</script>
+
 </body>
 
 </html>
