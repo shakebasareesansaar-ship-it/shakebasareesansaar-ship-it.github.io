@@ -773,20 +773,20 @@
     /* ================= CURSIVE WINE LUXURY THEME ================= */
 
     :root {
-      --green: #5a1831;
-      --dark-green: #2b0b19;
+      --green: #173f5f;
+      --dark-green: #0b2638;
       --gold: #e8c76b;
       --gold-dark: #b98232;
-      --cream: #fff7f1;
-      --cream-2: #f3e1e5;
+      --cream: #f7fbff;
+      --cream-2: #e5edf4;
       --ink: #35262b;
     }
 
     body {
       background:
         radial-gradient(circle at 12% 8%, rgba(232,199,107,0.14), transparent 24%),
-        radial-gradient(circle at 88% 78%, rgba(139,42,76,0.10), transparent 28%),
-        linear-gradient(135deg, #fffaf6 0%, #f8e9ec 48%, #fff8f3 100%);
+        radial-gradient(circle at 88% 78%, rgba(23,63,95,0.10), transparent 28%),
+        linear-gradient(135deg, #f8fbfd 0%, #edf4f8 48%, #fff8f3 100%);
     }
 
     header {
@@ -809,7 +809,7 @@
 
     .hero {
       background:
-        linear-gradient(135deg, rgba(43,11,25,0.90), rgba(90,24,49,0.72)),
+        linear-gradient(135deg, rgba(43,11,25,0.90), rgba(23,63,95,0.72)),
         url("./shop.jpg") center/cover no-repeat;
     }
 
@@ -821,29 +821,29 @@
     .title h2,
     .card h3,
     .contact-box h3 {
-      color: #5a1831;
+      color: #173f5f;
     }
 
     .card,
     .review,
     .contact-box {
       background: rgba(255,252,249,0.96);
-      border-color: rgba(139,42,76,0.16);
+      border-color: rgba(23,63,95,0.16);
     }
 
     .card:hover {
-      border-color: rgba(185,130,50,0.50);
-      box-shadow: 0 18px 38px rgba(90,24,49,0.16);
+      border-color: rgba(185,145,55,0.50);
+      box-shadow: 0 18px 38px rgba(23,63,95,0.16);
     }
 
     .about {
       background:
         radial-gradient(circle at 18% 20%, rgba(232,199,107,0.12), transparent 30%),
-        linear-gradient(135deg, #2b0b19, #5a1831, #3b1022);
+        linear-gradient(135deg, #0b2638, #173f5f, #102f47);
     }
 
     .reviews {
-      background: linear-gradient(135deg, #f3e1e5, #fff5ef);
+      background: linear-gradient(135deg, #e5edf4, #fff5ef);
     }
 
     footer {
@@ -851,7 +851,7 @@
     }
 
     .lightbox-close {
-      background: rgba(90,24,49,0.94);
+      background: rgba(23,63,95,0.94);
     }
 
     @media (max-width: 700px) {
@@ -866,25 +866,25 @@
 
 
     /* ================= EXTRA BOUTIQUE FEATURES ================= */
-    .category-section{background:linear-gradient(135deg,#fffaf6,#f6e4e8);}
+    .category-section{background:linear-gradient(135deg,#f8fbfd,#f6e4e8);}
     .category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;z-index:2;}
-    .category-card{display:block;text-align:center;text-decoration:none;color:#35262b;background:rgba(255,255,255,.88);padding:32px 18px;border:1px solid rgba(185,130,50,.28);border-radius:24px;box-shadow:0 12px 30px rgba(90,24,49,.08);transition:.35s;}
-    .category-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(90,24,49,.16);border-color:#b98232;}
+    .category-card{display:block;text-align:center;text-decoration:none;color:#35262b;background:rgba(255,255,255,.88);padding:32px 18px;border:1px solid rgba(185,145,55,.28);border-radius:24px;box-shadow:0 12px 30px rgba(23,63,95,.08);transition:.35s;}
+    .category-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(23,63,95,.16);border-color:#b98232;}
     .category-card span{font-size:42px;display:block;margin-bottom:10px;}
-    .category-card h3{font-size:24px;color:#5a1831;margin-bottom:5px;}
+    .category-card h3{font-size:24px;color:#173f5f;margin-bottom:5px;}
     .category-card p{color:#76666b;}
-    .new-arrivals-section{background:linear-gradient(135deg,#3b1022,#5a1831);color:white;}
+    .new-arrivals-section{background:linear-gradient(135deg,#102f47,#173f5f);color:white;}
     .new-arrivals-section .title h2{color:#f1d47f;}
-    .new-arrivals-section .title p{color:#f8e9ec;}
+    .new-arrivals-section .title p{color:#edf4f8;}
     .new-arrival-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;z-index:2;}
-    .new-arrival-card{position:relative;display:block;overflow:hidden;text-decoration:none;color:white;background:#2b0b19;border:1px solid rgba(232,199,107,.32);border-radius:24px;padding:12px;box-shadow:0 18px 40px rgba(0,0,0,.2);transition:.35s;}
+    .new-arrival-card{position:relative;display:block;overflow:hidden;text-decoration:none;color:white;background:#0b2638;border:1px solid rgba(232,199,107,.32);border-radius:24px;padding:12px;box-shadow:0 18px 40px rgba(0,0,0,.2);transition:.35s;}
     .new-arrival-card:hover{transform:translateY(-8px);border-color:#e8c76b;}
     .new-arrival-card img{width:100%;height:360px;object-fit:cover;border-radius:17px;display:block;transition:.45s;}
     .new-arrival-card:hover img{transform:scale(1.04);}
-    .new-arrival-card span{display:inline-block;margin:16px 0 5px;padding:5px 10px;border-radius:20px;background:#e8c76b;color:#2b0b19;font:700 11px Arial,sans-serif;letter-spacing:1.2px;}
+    .new-arrival-card span{display:inline-block;margin:16px 0 5px;padding:5px 10px;border-radius:20px;background:#e8c76b;color:#0b2638;font:700 11px Arial,sans-serif;letter-spacing:1.2px;}
     .new-arrival-card h3{font-size:24px;padding:0 5px 8px;color:#fff8ef;}
     .whatsapp-enquiry{display:inline-block;margin-top:14px;padding:9px 15px;border-radius:24px;background:#25D366;color:white;text-decoration:none;font:700 13px Arial,sans-serif;}
-    .back-top{position:fixed;right:22px;bottom:92px;z-index:1900;width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#5a1831;color:#f1d47f;border:1px solid #e8c76b;box-shadow:0 8px 22px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:.25s;font-size:21px;}
+    .back-top{position:fixed;right:22px;bottom:92px;z-index:1900;width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#173f5f;color:#f1d47f;border:1px solid #e8c76b;box-shadow:0 8px 22px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:.25s;font-size:21px;}
     .back-top.show{opacity:1;pointer-events:auto;}
     .contact-box::after{content:"✦  ✦  ✦";display:block;color:#b98232;letter-spacing:7px;margin-top:24px;font-size:13px;}
     @media(max-width:900px){.category-grid{grid-template-columns:repeat(2,1fr)}.new-arrival-grid{grid-template-columns:1fr 1fr}}
