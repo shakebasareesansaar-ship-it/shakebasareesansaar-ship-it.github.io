@@ -690,6 +690,25 @@
     @keyframes collectionReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @media(max-width:700px){.collection-toggle{width:90%;max-width:330px;font-size:15px;padding:15px 18px;}}
 
+    /* ================= EXTRA DECORATIVE BOUTIQUE LAYER ================= */
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.18;background-image:radial-gradient(circle at 10% 20%,rgba(185,130,50,.25) 0 1px,transparent 1.5px),radial-gradient(circle at 80% 70%,rgba(23,63,95,.18) 0 1px,transparent 1.5px);background-size:34px 34px,46px 46px;}
+    .title h2{position:relative;display:inline-block;}
+    .title h2::before,.title h2::after{content:"✦";color:#b98232;font-size:13px;vertical-align:middle;margin:0 14px;opacity:.8;}
+    .card,.category-card,.new-arrival-card,.review,.contact-box{position:relative;}
+    .card::after,.category-card::after,.new-arrival-card::after,.review::after,.contact-box::after{content:"";position:absolute;inset:5px;border:1px solid rgba(185,130,50,.10);border-radius:inherit;pointer-events:none;}
+    .section-divider{height:70px;position:relative;background:linear-gradient(180deg,transparent,#f7fbff,transparent);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .section-divider::before{content:"";width:70%;height:1px;background:linear-gradient(90deg,transparent,rgba(185,130,50,.55),transparent);}
+    .section-divider::after{content:"✦";position:absolute;background:#f7fbff;padding:0 18px;color:#b98232;font-size:22px;}
+    .hero-content{animation:boutiqueFloat 7s ease-in-out infinite;}
+    @keyframes boutiqueFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+    .category-card span{filter:drop-shadow(0 5px 8px rgba(185,130,50,.18));}
+    .whatsapp-enquiry{position:relative;z-index:3;box-shadow:0 7px 16px rgba(37,211,102,.18);transition:.25s;}
+    .whatsapp-enquiry:hover{transform:translateY(-2px) scale(1.02);}
+    .floating-whatsapp{animation:whatsappPulse 2.4s infinite;}
+    @keyframes whatsappPulse{0%,100%{box-shadow:0 10px 28px rgba(0,0,0,.25),0 0 0 0 rgba(37,211,102,.35)}50%{box-shadow:0 10px 28px rgba(0,0,0,.25),0 0 0 10px rgba(37,211,102,0)}}
+    .back-top{border:1px solid rgba(232,199,107,.45);background:#173f5f;color:#f1d47f;box-shadow:0 8px 20px rgba(23,63,95,.22);}
+    @media(max-width:700px){body::before{opacity:.10}.title h2::before,.title h2::after{margin:0 7px;font-size:10px}.section-divider{height:45px}}
+
     /* ================= IMAGE LIGHTBOX / ZOOM ================= */
 
     .zoomable {
@@ -1126,6 +1145,8 @@
 
 
 
+
+  <div class="section-divider" aria-hidden="true"></div>
   <!-- ================= GALLERY ================= -->
 
   <section id="gallery">
@@ -1183,6 +1204,8 @@
   </section>
 
   <div id="collectionContent" class="collection-content" hidden>
+
+  <div class="section-divider" aria-hidden="true"></div>
   <!-- ================= LEHENGA & GHARARA ================= -->
 
   <section
@@ -1327,6 +1350,8 @@
 
 
 
+
+  <div class="section-divider" aria-hidden="true"></div>
   <!-- ================= KURTI COLLECTION ================= -->
 
   <section
@@ -1484,6 +1509,8 @@
   </section>
 
 
+
+  <div class="section-divider" aria-hidden="true"></div>
   <!-- ================= SUIT COLLECTION ================= -->
 
   <section
