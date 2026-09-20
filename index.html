@@ -2413,6 +2413,48 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 
+
+<!-- ================= SIGNATURE PREMIUM EXPERIENCE ================= -->
+<style>
+:root{--navy:#071d2b;--navy2:#0d3044;--gold:#e8c76b;--gold2:#b98232;--ivory:#fffaf0}
+.premium-marquee{background:linear-gradient(90deg,var(--navy),#173f5f,var(--navy));color:#fff8e8;border-top:1px solid rgba(232,199,107,.18);border-bottom:1px solid rgba(232,199,107,.18);overflow:hidden;white-space:nowrap;font:600 12px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase}
+.premium-marquee-track{display:inline-block;padding:10px 0;animation:marquee 28s linear infinite}
+.premium-marquee span{margin:0 34px;color:var(--gold)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.premium-welcome{max-width:1100px;margin:34px auto 0;padding:0 20px;text-align:center}
+.premium-kicker{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font:700 11px Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase}
+.premium-kicker:before,.premium-kicker:after{content:"";width:42px;height:1px;background:linear-gradient(90deg,transparent,var(--gold2))}.premium-kicker:after{transform:scaleX(-1)}
+.premium-welcome h2{margin:10px 0 8px;color:var(--navy);font:600 clamp(27px,4vw,42px) Georgia,serif}
+.premium-welcome p{color:#6b6258;max-width:700px;margin:auto}
+.signature-grid{max-width:1100px;margin:28px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.signature-card{padding:20px 14px;background:rgba(255,255,255,.82);border:1px solid rgba(185,130,50,.22);border-radius:18px;text-align:center;box-shadow:0 10px 28px rgba(20,35,40,.07);transition:.3s}
+.signature-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(20,35,40,.12);border-color:rgba(185,130,50,.45)}
+.signature-card .icon{font-size:25px;margin-bottom:8px}.signature-card strong{display:block;color:var(--navy);font:600 16px Georgia,serif}.signature-card small{display:block;color:#777;margin-top:5px;font:12px Arial,sans-serif}
+.premium-cta{max-width:1100px;margin:30px auto 0;padding:0 20px}.premium-cta-inner{position:relative;overflow:hidden;border-radius:28px;padding:34px 36px;background:linear-gradient(120deg,#071d2b,#173f5f);color:white;border:1px solid rgba(232,199,107,.35);box-shadow:0 22px 55px rgba(7,29,43,.18);display:flex;align-items:center;justify-content:space-between;gap:25px}.premium-cta-inner:after{content:"✦";position:absolute;right:30px;top:-22px;font-size:120px;color:rgba(232,199,107,.08)}.premium-cta h3{font:600 28px Georgia,serif;color:var(--gold);margin-bottom:5px}.premium-cta p{color:#e8edf0;font-size:14px}.premium-cta .btn{position:relative;z-index:2;white-space:nowrap}
+footer{position:relative!important;border-top:1px solid rgba(232,199,107,.35)!important;background:linear-gradient(180deg,#071d2b,#04131d)!important;padding:48px 7% 28px!important}.premium-footer-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px;text-align:left}.premium-footer-grid h3{color:var(--gold);font:600 20px Georgia,serif;margin-bottom:12px}.premium-footer-grid p,.premium-footer-grid a{color:#dbe4e8;font:13px/1.9 Arial,sans-serif;text-decoration:none}.premium-footer-grid a:hover{color:var(--gold)}.footer-brand{font:600 26px Georgia,serif!important;color:#fff8e8!important}.footer-sub{color:#aebdc5!important;margin-top:6px}.footer-bottom{max-width:1100px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);text-align:center;color:#8fa0a8;font:11px Arial,sans-serif}.footer-bottom span{color:var(--gold)}
+.scroll-top-premium{position:fixed;right:20px;bottom:28px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(232,199,107,.6);background:var(--navy);color:var(--gold);z-index:1998;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:.25s;font-size:18px}.scroll-top-premium.show{opacity:1;pointer-events:auto}.scroll-top-premium:hover{transform:translateY(-3px)}
+@media(max-width:800px){.signature-grid{grid-template-columns:repeat(2,1fr)}.premium-cta-inner{flex-direction:column;align-items:flex-start;padding:28px 23px}.premium-cta h3{font-size:24px}.premium-footer-grid{grid-template-columns:1fr;text-align:center;gap:24px}.scroll-top-premium{right:14px;bottom:76px}}
+@media(max-width:480px){.signature-grid{grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}.signature-card{padding:16px 8px}.premium-welcome{padding:0 14px}.premium-cta{padding:0 12px}.premium-marquee-track{animation-duration:22s}}
+</style>
+<div class="premium-marquee" aria-label="Shop highlights"><div class="premium-marquee-track">SHAKEBA SAREE SANSAAR <span>✦</span> WEDDING COLLECTION <span>✦</span> FESTIVE STYLES <span>✦</span> PERSONAL ASSISTANCE <span>✦</span> WHATSAPP ENQUIRY <span>✦</span> SHAKEBA SAREE SANSAAR <span>✦</span> WEDDING COLLECTION <span>✦</span> FESTIVE STYLES <span>✦</span> PERSONAL ASSISTANCE <span>✦</span> WHATSAPP ENQUIRY <span>✦</span></div></div>
+<section class="premium-welcome" aria-label="Shopping experience"><div class="premium-kicker">The Shakeba Signature</div><h2>Designed For Your Special Moments</h2><p>Discover graceful styles, thoughtful assistance and a collection curated for weddings, celebrations and everyday elegance.</p></section>
+<div class="signature-grid">
+  <div class="signature-card"><div class="icon">💎</div><strong>Elegant Selection</strong><small>Graceful styles for every occasion</small></div>
+  <div class="signature-card"><div class="icon">👗</div><strong>Wedding Edit</strong><small>Celebrate in timeless tradition</small></div>
+  <div class="signature-card"><div class="icon">✨</div><strong>Personal Assistance</strong><small>Find a look that feels right</small></div>
+  <div class="signature-card"><div class="icon">💬</div><strong>Easy Enquiry</strong><small>Ask us directly on WhatsApp</small></div>
+</div>
+<div class="premium-cta"><div class="premium-cta-inner"><div><h3>Looking For Your Perfect Look?</h3><p>Send us a message and ask about designs, colours, sizes and availability.</p></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/917079739467?text=Hello%20Shakeba%20Saree%20Sansaar%2C%20I%20am%20looking%20for%20a%20beautiful%20outfit.%20Please%20help%20me%20choose.">💬 Chat With Us</a></div></div>
+<script>
+(function(){
+  const footer=document.querySelector('footer');
+  if(footer&&!footer.querySelector('.premium-footer-grid')){
+    footer.innerHTML='<div class="premium-footer-grid"><div><a class="footer-brand" href="#home">Shakeba Saree Sansaar</a><p class="footer-sub">Elegance Woven With Tradition</p><p>Beautiful sarees, festive styles and occasion wear with personal assistance.</p></div><div><h3>Visit Us</h3><p>📍 Isapur Petrol Line,<br>Phulwari Sharif, Patna - 801505</p><p>🕐 10:00 AM – 8:00 PM</p><a target="_blank" rel="noopener" href="https://maps.app.goo.gl/fVHsGSmQYv2jsvkH6">📍 Open Google Maps</a></div><div><h3>Connect</h3><p>📞 <a href="tel:+917079739467">7079739467</a></p><p>💬 <a target="_blank" rel="noopener" href="https://wa.me/917079739467">WhatsApp Us</a></p><p>👗 <a href="#our-collection">Explore Collection</a></p><p>🏠 <a href="#home">Back To Home</a></p></div></div><div class="footer-bottom">© '+new Date().getFullYear()+' <span>Shakeba Saree Sansaar</span> • Crafted with care for every celebration</div>';
+  }
+  if(!document.querySelector('.scroll-top-premium')){const b=document.createElement('button');b.className='scroll-top-premium';b.innerHTML='↑';b.setAttribute('aria-label','Back to top');document.body.appendChild(b);window.addEventListener('scroll',()=>b.classList.toggle('show',window.scrollY>500),{passive:true});b.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
+})();
+</script>
+
 </body>
 
 </html>
