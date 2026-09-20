@@ -979,6 +979,41 @@
  .hero-badge{font-size:10px;padding:7px 12px;}
 }
 
+  
+/* ================= NEXT-LEVEL BOUTIQUE EXPERIENCE ================= */
+.hero-content{max-width:920px;}
+.hero h1{font-size:clamp(42px,7.5vw,78px);}
+.hero p{max-width:700px;margin-left:auto;margin-right:auto;}
+.hero .btn{min-width:175px;}
+.premium-strip{max-width:1100px;margin:-34px auto 0;position:relative;z-index:8;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(255,255,255,.97);border:1px solid rgba(185,130,50,.2);border-radius:22px;box-shadow:0 18px 45px rgba(23,63,95,.12);overflow:hidden;}
+.premium-strip div{padding:20px;text-align:center;border-right:1px solid rgba(185,130,50,.14);}
+.premium-strip div:last-child{border-right:0;}
+.premium-strip b{display:block;color:#173f5f;font-size:16px;}
+.premium-strip span{display:block;color:#777;font:12px Arial,sans-serif;margin-top:4px;}
+.section-intro{max-width:720px;margin:-28px auto 38px;text-align:center;color:#6b6b6b;font-size:15px;}
+.category-card{cursor:pointer;transition:.35s;}
+.category-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 18px 40px rgba(23,63,95,.15);}
+.card img{aspect-ratio:4/5;}
+.gallery img{aspect-ratio:4/3;height:auto;}
+.about-content{max-width:900px;}
+.about-highlight{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px auto 0;max-width:850px;}
+.about-highlight div{padding:18px;border:1px solid rgba(232,199,107,.28);border-radius:16px;background:rgba(255,255,255,.05);}
+.about-highlight strong{display:block;color:#e8c76b;font-size:16px;}
+.about-highlight span{display:block;margin-top:5px;font-size:13px;opacity:.85;}
+.contact-box{max-width:820px;}
+.contact-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;}
+footer{position:relative;}
+.footer-links{margin-top:8px;font:12px Arial,sans-serif;opacity:.8;}
+@media(max-width:700px){
+ .premium-strip{width:92%;grid-template-columns:1fr;margin:-22px auto 0;border-radius:18px;}
+ .premium-strip div{border-right:0;border-bottom:1px solid rgba(185,130,50,.14);padding:14px;}
+ .premium-strip div:last-child{border-bottom:0;}
+ .hero .btn{min-width:145px;padding:12px 18px;font-size:13px;}
+ .section-intro{margin:-22px auto 28px;font-size:14px;}
+ .about-highlight{grid-template-columns:1fr;}
+ .contact-actions .btn{width:90%;max-width:300px;}
+}
+
   </style>
 
 </head>
@@ -1865,8 +1900,9 @@
       <p>
         Visit our store and explore our collection
         in person. Our team will be happy to help
-        you find the perfect saree.
+        you find a style that suits your occasion.
       </p>
+      <div class="about-highlight"><div><strong>Elegant Collections</strong><span>Sarees, lehengas, ghararas, kurtis & suits</span></div><div><strong>Occasion Ready</strong><span>Wedding, festive, party & everyday styles</span></div><div><strong>Visit In Store</strong><span>See the collection and choose comfortably</span></div></div>
 
     </div>
 
@@ -2113,7 +2149,7 @@
     </span>
 
     — All Rights Reserved.
-
+    <div class="footer-links">Phulwari Sharif, Patna • 7079739467 • 10:00 AM – 8:00 PM</div>
   </footer>
 
 
