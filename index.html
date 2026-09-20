@@ -680,6 +680,16 @@
     }
 
 
+    /* ================= COLLAPSED FULL COLLECTION ================= */
+    .our-collection-launcher{background:linear-gradient(135deg,#f8fbfd,#f6e4e8);text-align:center;padding-bottom:55px;}
+    .our-collection-launcher .title{margin-bottom:24px;}
+    .collection-toggle{border:0;cursor:pointer;padding:16px 30px;border-radius:32px;background:linear-gradient(135deg,#173f5f,#102f47);color:#f1d47f;font:700 16px Georgia,serif;box-shadow:0 12px 28px rgba(23,63,95,.22);transition:.3s;}
+    .collection-toggle:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(23,63,95,.28);}
+    .collection-content{animation:collectionReveal .45s ease both;}
+    .collection-content[hidden]{display:none;}
+    @keyframes collectionReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:700px){.collection-toggle{width:90%;max-width:330px;font-size:15px;padding:15px 18px;}}
+
     /* ================= IMAGE LIGHTBOX / ZOOM ================= */
 
     .zoomable {
@@ -1161,6 +1171,18 @@
 
 
 
+  <!-- ================= OUR COLLECTION ================= -->
+  <section id="our-collection" class="our-collection-launcher">
+    <div class="title">
+      <h2>Our Collection</h2>
+      <p>Explore all our sarees, lehengas, ghararas, kurtis and suits.</p>
+    </div>
+    <button class="collection-toggle" id="collectionToggle" type="button" aria-expanded="false" aria-controls="collectionContent">
+      ✨ View Our Full Collection
+    </button>
+  </section>
+
+  <div id="collectionContent" class="collection-content" hidden>
   <!-- ================= LEHENGA & GHARARA ================= -->
 
   <section
@@ -2129,6 +2151,27 @@
 
   </footer>
 
+
+  <script>
+    (function(){
+      const toggle=document.getElementById("collectionToggle");
+      const content=document.getElementById("collectionContent");
+      if(!toggle||!content)return;
+      toggle.addEventListener("click",function(){
+        const open=toggle.getAttribute("aria-expanded")==="true";
+        if(open){
+          content.hidden=true;
+          toggle.setAttribute("aria-expanded","false");
+          toggle.innerHTML="✨ View Our Full Collection";
+        }else{
+          content.hidden=false;
+          toggle.setAttribute("aria-expanded","true");
+          toggle.innerHTML="✕ Hide Full Collection";
+          setTimeout(()=>content.scrollIntoView({behavior:"smooth",block:"start"}),50);
+        }
+      });
+    })();
+  </script>
 
 </body>
 
