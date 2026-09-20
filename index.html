@@ -287,6 +287,398 @@
 
     }
 
+
+    /* ================= PREMIUM DECORATIVE MAKEOVER ================= */
+
+    :root {
+      --green: #12372a;
+      --dark-green: #0b241b;
+      --gold: #e8c76b;
+      --gold-dark: #c69b3c;
+      --cream: #f8f3e7;
+      --cream-2: #eee5d4;
+      --ink: #2d2a26;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(232,199,107,0.10), transparent 22%),
+        radial-gradient(circle at 85% 70%, rgba(18,55,42,0.06), transparent 24%),
+        var(--cream);
+      color: var(--ink);
+    }
+
+    header {
+      background: rgba(11,36,27,0.97);
+      border-bottom: 1px solid rgba(232,199,107,0.35);
+      box-shadow: 0 8px 28px rgba(11,36,27,0.22);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      position: relative;
+      text-shadow: 0 0 18px rgba(232,199,107,0.18);
+    }
+
+    .logo::after {
+      content: "✦";
+      margin-left: 9px;
+      font-size: 12px;
+      vertical-align: middle;
+    }
+
+    nav a {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 88vh;
+      background:
+        linear-gradient(135deg, rgba(8,28,21,0.88), rgba(18,55,42,0.70)),
+        url("./shop.jpg") center/cover no-repeat;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(232,199,107,0.45);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: -100px;
+      left: -100px;
+    }
+
+    .hero::after {
+      right: -100px;
+      bottom: -100px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 42px 28px;
+      border: 1px solid rgba(232,199,107,0.35);
+      border-radius: 28px;
+      background: rgba(8,28,21,0.30);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.28);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      letter-spacing: 1px;
+      text-shadow: 0 5px 30px rgba(0,0,0,0.35);
+    }
+
+    .hero p {
+      color: #fff9e9;
+      letter-spacing: 0.6px;
+    }
+
+    .btn {
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: var(--green);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+    }
+
+    section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    section:not(.hero):not(.about):not(.reviews)::before {
+      content: "✦";
+      position: absolute;
+      top: 28px;
+      left: 4%;
+      color: rgba(198,155,60,0.22);
+      font-size: 34px;
+      pointer-events: none;
+    }
+
+    section:not(.hero):not(.about):not(.reviews)::after {
+      content: "✦";
+      position: absolute;
+      right: 4%;
+      bottom: 28px;
+      color: rgba(198,155,60,0.18);
+      font-size: 28px;
+      pointer-events: none;
+    }
+
+    .title {
+      position: relative;
+      z-index: 2;
+    }
+
+    .title h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: 0.5px;
+    }
+
+    .title h2::after {
+      content: "  ✦  ";
+      display: block;
+      color: var(--gold-dark);
+      font-size: 16px;
+      margin-top: 8px;
+      letter-spacing: 5px;
+    }
+
+    .title p {
+      font-size: 16px;
+    }
+
+    .cards {
+      position: relative;
+      z-index: 2;
+      gap: 26px;
+    }
+
+    .card,
+    .review,
+    .contact-box {
+      border: 1px solid rgba(198,155,60,0.18);
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 12px 30px rgba(30,40,32,0.09);
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 16px 16px 24px;
+      border-radius: 22px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(198,155,60,0.14);
+      border-radius: 17px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-9px);
+      border-color: rgba(198,155,60,0.48);
+      box-shadow: 0 18px 38px rgba(18,55,42,0.16);
+    }
+
+    .card img,
+    .gallery img {
+      transition: transform 0.55s ease, filter 0.55s ease, box-shadow 0.35s ease;
+    }
+
+    .card:hover img,
+    .gallery img:hover {
+      transform: scale(1.035);
+      filter: saturate(1.05) contrast(1.02);
+    }
+
+    .card h3 {
+      position: relative;
+      z-index: 2;
+      font-size: 21px;
+      margin-top: 18px;
+      letter-spacing: 0.2px;
+    }
+
+    .card p {
+      position: relative;
+      z-index: 2;
+      color: #666;
+    }
+
+    .gallery {
+      position: relative;
+      z-index: 2;
+      gap: 22px;
+    }
+
+    .gallery img {
+      border: 5px solid #fff;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.13);
+    }
+
+    .about {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(232,199,107,0.10), transparent 30%),
+        linear-gradient(135deg, #0b241b, #12372a);
+      position: relative;
+    }
+
+    .about::before {
+      content: "✦";
+      position: absolute;
+      left: 8%;
+      top: 45px;
+      color: rgba(232,199,107,0.25);
+      font-size: 42px;
+    }
+
+    .about::after {
+      content: "✦";
+      position: absolute;
+      right: 8%;
+      bottom: 45px;
+      color: rgba(232,199,107,0.20);
+      font-size: 34px;
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .about h2 {
+      text-shadow: 0 0 20px rgba(232,199,107,0.15);
+    }
+
+    .review {
+      border-radius: 20px;
+      padding: 30px 22px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .review:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(30,40,32,0.12);
+    }
+
+    .stars {
+      text-shadow: 0 2px 12px rgba(209,159,40,0.20);
+    }
+
+    .contact-box {
+      position: relative;
+      z-index: 2;
+      border-radius: 24px;
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 18px 45px rgba(18,55,42,0.12);
+    }
+
+    .contact-box h3 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2000;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      font-size: 27px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+      border: 3px solid white;
+      transition: transform 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.08) translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid rgba(232,199,107,0.25);
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 14px 4%;
+      }
+
+      nav {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 4px;
+      }
+
+      nav a {
+        display: inline-block;
+      }
+
+      .hero {
+        min-height: 78vh;
+      }
+
+      .hero-content {
+        padding: 30px 18px;
+        border-radius: 22px;
+      }
+
+      .hero h1 {
+        font-size: clamp(34px, 11vw, 52px);
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section:not(.hero):not(.about):not(.reviews)::before {
+        left: 3%;
+        top: 18px;
+        font-size: 24px;
+      }
+
+      section:not(.hero):not(.about):not(.reviews)::after {
+        right: 3%;
+        bottom: 18px;
+        font-size: 22px;
+      }
+
+      .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+        width: 54px;
+        height: 54px;
+        font-size: 25px;
+      }
+    }
+
   </style>
 
 </head>
@@ -1351,6 +1743,16 @@
   </section>
 
 
+
+
+  <!-- ================= FLOATING WHATSAPP ================= -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/917079739467"
+    target="_blank"
+    aria-label="Chat with Shakeba Saree Sansaar on WhatsApp"
+    title="WhatsApp"
+  >💬</a>
 
   <!-- ================= FOOTER ================= -->
 
