@@ -890,6 +890,18 @@
     @media(max-width:900px){.category-grid{grid-template-columns:repeat(2,1fr)}.new-arrival-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:700px){.category-grid,.new-arrival-grid{grid-template-columns:1fr}.new-arrival-card img{height:330px}.back-top{right:16px;bottom:82px;width:42px;height:42px}}
 
+
+    /* ================= SIGNATURE BOUTIQUE EXPERIENCE ================= */
+    .look-section{background:linear-gradient(135deg,#f8fbfd,#eaf1f6)}
+    .look-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:2}
+    .look-card{padding:30px 18px;text-align:center;text-decoration:none;color:#173f5f;background:rgba(255,255,255,.9);border:1px solid rgba(185,145,55,.35);border-radius:24px;transition:.35s;box-shadow:0 12px 28px rgba(23,63,95,.08)}
+    .look-card:hover{transform:translateY(-8px) scale(1.015);box-shadow:0 20px 38px rgba(23,63,95,.16);border-color:#b99137}.look-card span{display:block;font-size:42px;margin-bottom:10px}.look-card strong{display:block;font:600 24px Georgia,serif}.look-card small{display:block;margin-top:5px;color:#6a7379}
+    .story-section{background:#fffaf6;padding:90px 7%}.story-wrap{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.story-image{position:relative}.story-image::after{content:"";position:absolute;inset:18px;border:1px solid rgba(185,145,55,.5);border-radius:24px;pointer-events:none}.story-image img{width:100%;height:500px;object-fit:cover;border-radius:28px;display:block;box-shadow:0 20px 50px rgba(23,63,95,.16)}.story-copy{padding:20px}.eyebrow{display:inline-block;color:#b99137;font:700 12px Arial,sans-serif;letter-spacing:2.5px;margin-bottom:14px}.story-copy h2{font:600 clamp(38px,5vw,62px)/1.02 "Brush Script MT","Segoe Script",cursive;color:#173f5f;margin-bottom:22px}.story-copy p{font-size:18px;color:#5d6266;line-height:1.8;margin-bottom:25px}
+    .experience-section{background:linear-gradient(135deg,#102f47,#173f5f);color:white}.experience-section .title h2{color:#f1d47f}.experience-section .title p{color:#dce8f0}.experience-grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;z-index:2}.experience-grid div{text-align:center;padding:30px 15px;border:1px solid rgba(232,199,107,.22);border-radius:20px;background:rgba(255,255,255,.05)}.experience-grid span{color:#e8c76b;font-size:28px}.experience-grid h3{margin:12px 0 7px;color:#fff8ef}.experience-grid p{color:#cbd9e2;font-size:14px}
+    .ask-section{background:linear-gradient(135deg,#eef4f8,#fffaf6)}.ask-box{max-width:850px;margin:auto;text-align:center;padding:60px 30px;border:1px solid rgba(185,145,55,.38);border-radius:30px;background:rgba(255,255,255,.85);box-shadow:0 18px 45px rgba(23,63,95,.1)}.ask-box h2{font:600 58px "Brush Script MT","Segoe Script",cursive;color:#173f5f;margin-bottom:12px}.ask-box p{font-size:18px;color:#60676c;max-width:650px;margin:0 auto 25px}
+    @media(max-width:900px){.look-grid,.experience-grid{grid-template-columns:repeat(2,1fr)}.story-wrap{grid-template-columns:1fr;gap:25px}.story-image img{height:420px}}
+    @media(max-width:700px){.look-grid,.experience-grid{grid-template-columns:1fr}.story-section{padding:65px 5%}.story-image img{height:360px}.story-copy h2{font-size:48px}.ask-box{padding:45px 20px}.ask-box h2{font-size:48px}}
+
   </style>
 
 </head>
@@ -989,6 +1001,42 @@
       <a class="new-arrival-card" href="#suit-collection"><img src="./suits4.png" alt="Luxury suit new arrival"><span>NEW ARRIVAL</span><h3>Luxury Suit</h3></a>
       <a class="new-arrival-card" href="#kurti-collection"><img src="./kurti5.jpg" alt="Cotton kurti new arrival"><span>NEW ARRIVAL</span><h3>Graceful Kurti</h3></a>
     </div>
+  </section>
+
+
+  <!-- ================= CHOOSE YOUR LOOK ================= -->
+  <section class="look-section" id="choose-look">
+    <div class="title"><h2>✨ Choose Your Look</h2><p>Tell us the occasion. We'll take you to the right collection.</p></div>
+    <div class="look-grid">
+      <a href="#lehenga-gharara" class="look-card"><span>💍</span><strong>Wedding</strong><small>Royal & graceful</small></a>
+      <a href="#featured-collection" class="look-card"><span>🌸</span><strong>Festive</strong><small>Elegant celebration styles</small></a>
+      <a href="#suit-collection" class="look-card"><span>✨</span><strong>Party Wear</strong><small>Statement looks</small></a>
+      <a href="#kurti-collection" class="look-card"><span>🌿</span><strong>Everyday</strong><small>Easy & beautiful</small></a>
+    </div>
+  </section>
+
+  <!-- ================= SAREE STORY ================= -->
+  <section class="story-section">
+    <div class="story-wrap">
+      <div class="story-image"><img src="./sarees.jpg" alt="Shakeba Saree Sansaar saree collection"></div>
+      <div class="story-copy"><span class="eyebrow">THE SHAKEBA STORY</span><h2>From Tradition<br>To Your Style</h2><p>Every occasion deserves a look that feels special. Explore our handpicked mix of traditional elegance and modern style, right here in Phulwari Sharif.</p><a class="btn" href="#featured-collection">Discover The Collection</a></div>
+    </div>
+  </section>
+
+  <!-- ================= SHAKEBA EXPERIENCE ================= -->
+  <section class="experience-section">
+    <div class="title"><h2>👑 The Shakeba Experience</h2><p>More than shopping — discover a collection chosen for every occasion.</p></div>
+    <div class="experience-grid">
+      <div><span>✦</span><h3>Personal Assistance</h3><p>Friendly help to find your perfect style.</p></div>
+      <div><span>✦</span><h3>Latest Designs</h3><p>Fresh looks added to our collections.</p></div>
+      <div><span>✦</span><h3>Tradition + Modern</h3><p>Classic elegance with contemporary choices.</p></div>
+      <div><span>✦</span><h3>Wedding Selection</h3><p>Beautiful options for memorable celebrations.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= ASK SHAKEBA ================= -->
+  <section class="ask-section">
+    <div class="ask-box"><span class="eyebrow">CAN'T DECIDE?</span><h2>Ask Shakeba 💬</h2><p>Not sure what to wear? Tell us your occasion and we'll help you explore the collection.</p><a class="btn" target="_blank" href="https://wa.me/917079739467?text=Hello%20Shakeba%20Saree%20Sansaar%2C%20I%20need%20help%20choosing%20an%20outfit.%20My%20occasion%20is%3A">Ask Our Style Team on WhatsApp</a></div>
   </section>
 
   <!-- ================= COLLECTION ================= -->
